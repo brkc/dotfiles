@@ -1,0 +1,5 @@
+*vt100*metaSendsEscape: true
+*vt100*font: -*-clean-*-*-*--12-*-*-*-*-*-iso10646-*
+*background: black
+*foreground: white
+Xcursor.theme: Adwaita
