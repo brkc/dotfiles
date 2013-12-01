@@ -1,0 +1,8 @@
+export BROWSER='chromium'
+export CC=clang
+export CXX=clang++
+export EDITOR='vim'
+case "$TERM" in
+xterm) TERM=xterm-256color ;;
+esac
+export TERM
