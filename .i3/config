@@ -1,5 +1,5 @@
 set $mod Mod1
-font xft:DejaVu Sans Mono 10
+font -*-fixed-medium-r-*-*-12-*-*-*-*-*-iso10646-*
 new_window pixel 3
 floating_modifier $mod
 bindsym $mod+Shift+Return exec --no-startup-id uxterm
