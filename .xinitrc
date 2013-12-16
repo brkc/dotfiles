@@ -1,2 +1,3 @@
 #!/bin/sh
-VBoxClient-all & exec "$@"
+VBoxClient-all
+exec "$@"
