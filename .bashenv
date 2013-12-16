@@ -3,5 +3,5 @@ BROWSER=firefox
 CC=clang
 CXX=clang++
 EDITOR=vim
-VISUAL=gvim
+VISUAL=vim
 set +a
