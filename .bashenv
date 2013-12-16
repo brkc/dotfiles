@@ -1,4 +1,5 @@
 set -a
+PATH="~/bin:$PATH"
 BROWSER=firefox
 CC=clang
 CXX=clang++
