@@ -1,10 +1,11 @@
 set $mod Mod1
-font -*-fixed-medium-r-*-*-12-*-*-*-*-*-iso10646-*
+set $font -*-fixed-medium-r-*-*-12-*-*-*-*-*-iso10646-*
+font $font
 new_window pixel 3
 floating_modifier $mod
 bindsym $mod+Shift+Return exec --no-startup-id uxterm
 bindsym $mod+Shift+c kill
-bindsym $mod+p exec --no-startup-id dmenu_run
+bindsym $mod+p exec --no-startup-id dmenu_run -fn $font
 bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
