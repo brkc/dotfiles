@@ -1,0 +1,6 @@
+files=$(find . -name '.*' -not -name . \
+               -not -name .git -not -name .mozilla)
+for file in $files; do
+  file=$(basename $file)
+  [[ ! -e ~/$file ]] && ln -s $PWD/$file ~/$file
+done
