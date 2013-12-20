@@ -1,4 +1,5 @@
 *background: #222
 *foreground: #eee
+*xterm*cursorUnderLine: true
 *xterm*font: -*-fixed-medium-r-*-*-12-*-*-*-*-*-iso10646-*
 Xcursor.theme: Adwaita
