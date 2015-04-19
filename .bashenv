@@ -1,9 +1,0 @@
-set -a
-PATH="~/bin:$PATH"
-BROWSER=firefox
-CC=clang
-CXX=clang++
-EDITOR=vim
-VISUAL=vim
-PS1='\w\$ '
-set +a
