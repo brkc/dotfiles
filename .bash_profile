@@ -1,7 +1,33 @@
-source .colors
+function join {
+  local IFS="$1"
+  shift
+  echo "$*"
+}
 
-export PATH="~/bin:$HOME/.rvm/bin:$PATH"
+# Build PATH
+paths=(
+  ~/bin
+  ~/.local/bin
+  ~/.rvm/bin
+  $PATH
+)
+
+# Environment variables
 export EDITOR=vim
 export PS1='\w\$ '
+export PATH=$(join : ${paths[*]})
 
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+# Load RVM into a shell session *as a function*
+[[ -s ~/.rvm/scripts/rvm ]] && source "$HOME/.rvm/scripts/rvm"
+
+# Bash settings
+shopts=(
+  checkwinsize
+  cmdhist
+  lithist
+  histappend
+)
+shopt -s ${shopts[*]}
+
+# Load colors
+#source .colors

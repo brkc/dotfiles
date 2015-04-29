@@ -2,5 +2,9 @@ files=$(find . -name '.*' -not -name . \
                -not -name .git -not -name .mozilla)
 for file in $files; do
   file=$(basename $file)
-  [[ ! -e ~/$file ]] && ln -s $PWD/$file ~/$file
+  if [[ -e ~/$file ]]; then
+    echo skipping $file
+    continue
+  fi
+  ln -s $PWD/$file ~/$file
 done
