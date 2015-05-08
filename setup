@@ -1,4 +1,5 @@
-files=$(find . -name '.*' -not -name . \
+# Link dotfiles
+files=$(find . -maxdepth 1 -name '.*' -not -name . \
                -not -name .git -not -name .mozilla)
 for file in $files; do
   file=$(basename $file)
@@ -8,3 +9,39 @@ for file in $files; do
   fi
   ln -s $PWD/$file ~/$file
 done
+source .bash_profile
+
+# Install debian packages
+packages=(
+  bzip2
+  gcc
+  make
+  linux-headers-amd64
+  xserver-xorg
+  xinit
+  x11-xserver-utils
+  xterm
+  i3
+  gnome-themes-standard
+  curl
+  git
+  vim
+)
+sudo apt-get install ${packages[*]}
+
+# Install ruby (and rails)
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+curl -sSL https://get.rvm.io | bash -s stable --rails --ignore-dotfiles
+
+# Install node
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+[[ -s ~/.nvm/nvm.sh ]] && source ~/.nvm/nvm.sh
+nvm install 0.12.2
+nvm use 0.12.2
+
+# Install chrome
+file=`mktemp`
+curl https://dl.google.com/linux/direct/google-chrome-beta_current_amd64.deb >"$file"
+sudo dpkg -i "$file"
+rm "$file"
+sudo apt-get -f install

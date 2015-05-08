@@ -17,8 +17,9 @@ export EDITOR=vim
 export PS1='\w\$ '
 export PATH=$(join : ${paths[*]})
 
-# Load RVM into a shell session *as a function*
-[[ -s ~/.rvm/scripts/rvm ]] && source "$HOME/.rvm/scripts/rvm"
+# Load rvm and nvm
+[[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
+[[ -s ~/.nvm/nvm.sh ]] && source ~/.nvm/nvm.sh
 
 # Bash settings
 shopts=(
