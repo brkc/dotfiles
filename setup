@@ -36,8 +36,8 @@ curl -sSL https://get.rvm.io | bash -s stable --rails --ignore-dotfiles
 # Install node
 curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
 [[ -s ~/.nvm/nvm.sh ]] && source ~/.nvm/nvm.sh
-nvm install 0.12.2
-nvm use 0.12.2
+nvm install stable
+nvm alias default stable
 
 # Install chrome
 file=`mktemp`
