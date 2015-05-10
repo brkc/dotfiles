@@ -2,5 +2,8 @@
 *foreground: #eee
 *xterm*cursorUnderLine: true
 *xterm*eightBitInput: false
-*xterm*font: -*-fixed-medium-r-*-*-12-*-*-*-*-*-iso10646-*
+*xterm*faceName: xft:DejaVu Sans Mono:pixelsize=10
 Xcursor.theme: Adwaita
+URxvt.font: xft:DejaVu Sans Mono:pixelsize=10
+URxvt.scrollBar: false
+URxvt.cursorUnderline: true
