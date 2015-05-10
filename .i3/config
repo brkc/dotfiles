@@ -61,3 +61,4 @@ bindsym $mod+Shift+0 move container to workspace 10
 for_window [class="Firefox" title="Firefox Preferences"] floating enable
 for_window [class="Firefox" title="Page Info - .*"] floating enable
 for_window [class="Firefox" title="Library"] floating enable
+for_window [instance="xterm"] floating enable
