@@ -1,5 +1,6 @@
 *background: #222
 *foreground: #eee
+*xterm*termName: xterm-256color
 *xterm*cursorUnderLine: true
 *xterm*eightBitInput: false
 *xterm*faceName: xft:DejaVu Sans Mono:pixelsize=10
