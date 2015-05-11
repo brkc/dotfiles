@@ -1,6 +1,7 @@
 set $mod Mod1
 set $font -*-fixed-medium-r-*-*-12-*-*-*-*-*-iso10646-*
 font pango:DejaVu Sans Mono 10
+new_window 1pixel
 workspace_layout tabbed
 floating_modifier $mod
 bindsym $mod+Shift+Return exec --no-startup-id uxterm
