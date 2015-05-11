@@ -3,7 +3,8 @@
 *xterm*termName: xterm-256color
 *xterm*cursorUnderLine: true
 *xterm*eightBitInput: false
-*xterm*faceName: xft:DejaVu Sans Mono:pixelsize=10
+*xterm*faceName: xft:DejaVu Sans Mono
+*xterm*faceSize: 10
 Xcursor.theme: Adwaita
 URxvt.font: xft:DejaVu Sans Mono:pixelsize=10
 URxvt.scrollBar: false
