@@ -8,6 +8,7 @@ function join {
 paths=(
   ~/bin
   ~/.local/bin
+  ~/.pyenv/bin
   ~/.rvm/bin
   $PATH
 )
@@ -17,10 +18,11 @@ export EDITOR=vim
 export PS1='\w\$ '
 export PATH=$(join : ${paths[*]})
 
-# Load rvm, nvm, and gvm
+# Load pyenv, rvm, nvm, and gvm
 [[ -s ~/.rvm/scripts/rvm ]] && source ~/.rvm/scripts/rvm
 [[ -s ~/.nvm/nvm.sh ]] && source ~/.nvm/nvm.sh
 [[ -s ~/.gvm/scripts/gvm ]] && source ~/.gvm/scripts/gvm
+eval "$(pyenv init -)"
 
 # Bash settings
 shopts=(
