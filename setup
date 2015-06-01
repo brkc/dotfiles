@@ -13,19 +13,33 @@ source .bash_profile
 
 # Install debian packages
 packages=(
+  # For virtualbox guests
   bzip2
-  gcc
-  make
-  linux-headers-amd64
+  linux-headers-$(uname -r)
+
+  # Desktop environment
   xserver-xorg
   xinit
   x11-xserver-utils
   xterm
   i3
   gnome-themes-standard
+
+  # Utils
   curl
   git
   vim
+
+  # Libs
+  build-essential
+  libbz2-dev
+  libgdm-dev
+  libncursesw-dev
+  libreadline-dev
+  libsqlite3-dev
+  libssl-dev
+  libz-dev
+  zlib1g-dev
 )
 sudo apt-get install ${packages[*]}
 
