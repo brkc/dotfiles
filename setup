@@ -34,14 +34,13 @@ packages=(
   build-essential
   libbz2-dev
   libgdm-dev
-  libncursesw-dev
+  libncursesw5-dev
   libreadline-dev
   libsqlite3-dev
   libssl-dev
-  libz-dev
   zlib1g-dev
 )
-sudo apt-get install ${packages[*]}
+sudo apt-get install -y ${packages[*]}
 
 # Install python
 git clone https://github.com/yyuu/pyenv.git ~/.pyenv
