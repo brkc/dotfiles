@@ -24,6 +24,7 @@ packages=(
   xterm
   i3
   gnome-themes-standard
+  ttf-dejavu-core
 
   # Utils
   curl
